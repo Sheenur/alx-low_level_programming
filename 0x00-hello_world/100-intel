@@ -1,4 +1,13 @@
-CFILE=main.c # Replace with the name of your C file
+#!/bin/bash
+
+# Set the name of the C file
+export CFILE=0-main.c
+
+# Generate the name of the output file
 OUTPUTFILE="${CFILE%.c}.s"
 
+# Compile the C file using Intel syntax and save the output to a file
 gcc -S -masm=intel $CFILE -o $OUTPUTFILE
+
+# Run the compiled assembly code
+./$OUTPUTFILE
