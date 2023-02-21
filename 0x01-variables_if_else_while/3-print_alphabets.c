@@ -1,20 +1,23 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
+#include <unistd.h>
 
 /**
- * main - A program that prints alphabet in lowercase
+ * main - Entry point
+ *
+ * Description: Program that prints the alphabet in lowercase, 
+ *              and then in uppercase, followed by a new line.
  * Return: Always 0 (Success)
  */
 int main(void)
 {
   char letter;
-  for (letter ='a'; letter <= 'z'; letter++)
-    purchar(letter);
-  for (letter = 'A'; letter <= 'Z'; letter++)
-    purchar(letter);
 
-  purchar('\n');
+  for (letter = 'a'; letter <= 'z'; letter++)
+    putchar(letter);
+
+  for (letter = 'A'; letter <= 'Z'; letter++)
+    putchar(letter);
+
+  putchar('\n');
 
   return (0);
 }
