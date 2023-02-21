@@ -1,6 +1,4 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <time.h>
+#include <unistd.h>
 
 /**
  * main - Entry point
@@ -14,7 +12,7 @@ int main(void)
   char letter;
 
   for (letter = 'a'; letter <= 'z'; letter++)
-	 putchar(letter);
+    putchar(letter);
 
   for (letter = 'A'; letter <= 'Z'; letter++)
     putchar(letter);
@@ -23,3 +21,8 @@ int main(void)
 
   return (0);
 }
+
+gcc -Wall -Werror -pedantic -std=gnu89 -o alphabet alphabet.c
+
+  ltrace -e write,putchar ./alphabet
+  
