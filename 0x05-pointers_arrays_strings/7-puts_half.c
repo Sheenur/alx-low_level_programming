@@ -4,7 +4,7 @@
  * puts_half - prints half of a string, followed by a newline
  * @str: the string to print
  */
-void puts_half(char *str);
+void puts_half(char *str)
 {
 int len = 0;
 int i;
