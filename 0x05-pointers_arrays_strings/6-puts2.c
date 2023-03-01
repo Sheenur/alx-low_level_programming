@@ -6,25 +6,28 @@
  * @str: input
  * Return: print
  */
-void puts2(char *str);
+void puts2(char *str)
 {
 int t = 0;
 int longi = 0;
 char *y = str;
-int o;
-
+ int o;
+    
 while (*y !=  '\0')
 {
-у++;
+y++;
 longi++;
 }
+    
 t = longi - 1;
-for (o = 0 ; o <= t ; 0++)
+    
+for (o = 0 ; o <= t ; o++)
 {
-if (0 % 2 == 0)
+if (o % 2 == 0)
 {
-_putchar(str[0]);
+_putchar(str[o]);
 }
 }
+    
 _putchar('\n');
 }
