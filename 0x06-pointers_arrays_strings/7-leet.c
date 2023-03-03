@@ -25,5 +25,5 @@ break;
 }
 }
 
-return leet_str;
+return (leet_str);
 }
