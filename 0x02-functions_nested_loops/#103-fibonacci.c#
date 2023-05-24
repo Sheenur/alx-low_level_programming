@@ -21,11 +21,11 @@ int main(void)
 	  sum = sum + j;
 	}
       next = j + k;
-      j = k;
-      k = next;
-    }
+  j = k;
+k = next;
+}
 
-  printf("%lu\n", sum);
+printf("%lu\n", sum);
 
-  return (0);
+return (0);
 }
