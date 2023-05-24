@@ -1,55 +1,41 @@
 #include "main.h"
-
 /**
- * print_times_table - prints the n times table, starting with 0
- * @n: number of the times table
- */
+*print_times_table - prints the  times table with
+*parameter
+*@n: parameter
+*Return: returns nothing
+*/
 void print_times_table(int n)
 {
-if (n >= 0 && n <= 15)
+int digit, mult, result;
+if (n <= 15 && n >= 0)
 {
-int i, j, k;
-
-for (i = 0; i <= n; i++)
+for (digit = 0; digit <= n; digit++)
 {
-for (j = 0; j <= n; j++)
-{
-k = j * i;
+_putchar('0');
 
-print_entry(k, j);
-}
-
-_putchar('\n');
-}
-}
-}
-
-/**
- * print_entry - prints a single entry in the times table
- * @k: the product of i and j
- * @j: the value of j in the times table
- */
-void print_entry(int k, int j)
-{
-if (j != 0)
+for (mult = 1; mult <= n; mult++)
 {
 _putchar(',');
 _putchar(' ');
-
-if (k < 10)
+result = digit * mult;
+if (result <= 99)
 _putchar(' ');
-else if (k < 100)
-_putchar((k / 10) + '0');
-else
-{
-_putchar((k / 100) + '0');
-_putchar(((k / 10) % 10) + '0');
-}
 
-_putchar((k % 10) + '0');
-}
-else
+if (result <= 9)
+_putchar(' ');
+if (result >= 100)
 {
-_putchar(k + '0');
+_putchar((result / 100) + '0');
+_putchar((result / 10) % 10 + '0');
+}
+else if (result <= 99 && result >= 10)
+{
+_putchar((result / 10) + '0');
+}
+_putchar((result % 10) + '0');
+}
+_putchar('\n');
+}
 }
 }
