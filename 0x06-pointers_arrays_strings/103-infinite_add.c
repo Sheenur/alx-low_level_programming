@@ -3,12 +3,12 @@
 /**
  * infinite_add - C function that adds two numbers stored
  *in strings to a buffer.
- *Assumes that strings are never empty and
+ * Assumes that strings are never empty and
  *that numbers will always be positive, or 0.
- *Assumes there are only digits stored in the number strings.
- *If result can be stored in the buffer,
+ * Assumes there are only digits stored in the number strings.
+ * If result can be stored in the buffer,
  *returns a pointer to the result.
- *If result cannot be stored in the buffer, returns `0`.
+ * If result cannot be stored in the buffer, returns `0`.
  *@n1:first number to be added
  *@n2:second number to be added
  *@r: store result
@@ -18,6 +18,9 @@
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
+  /* Your code here */
+     return NULL; // Replace with the appropriate return statement
+
 }
 
 /**
@@ -43,18 +46,19 @@ num += tens;
 tens = num / 10;
 }
 
-for (; *n1; n1--; r_index++)
+for (; *n1; n1--, r_index++)
 {
 num = *(n1 - '0') + tens; 
 *(r + r_index) = (num % 10) + '0';
 tens = num / 10;
 }
 
-for (; *n2; n2--;  r_index--)
+for (; *n2; n2--,  r_index--)
 {
 num = (*n2 - '0') + tens; 
 *(r + r_index) = (num % 10) + '0';
 tens = num / 10; 
 }
-  
+return r; // Add the appropriate return statement
 }
+
