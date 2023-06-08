@@ -1,0 +1,13 @@
+"#include "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    _print_rev_recursion("\nColton Walker");
+    return (0);
+}"
+https://intranet.alxswe.com/projects/219#:~:text=%23include%20%22main.h%22%0A%0A/**%0A%20*%20main%20%2D%20check%20the%20code%0A%20*%0A%20*%20Return%3A%20Always%200.%0A%20*/%0Aint%20main(void)%0A%7B%0A%20%20%20%20_print_rev_recursion(%22%5CnColton%20Walker%22)%3B%0A%20%20%20%20return%20(0)%3B%0A%7D
